@@ -26,7 +26,7 @@ class Platforming extends JPanel {
         g.setColor(Color.ORANGE);
         g.fillRect(0, 0, w, h);
 
-        g.setColor(Color.GREEN);
-        g.fillRect(0, );
+        //g.setColor(Color.GREEN);
+        //g.fillRect(0, );
     }
 }
