@@ -10,6 +10,8 @@ public class Alan_Object {
     private int dx;
     private int dy;
     private Image image;
+    private int w;
+    private int h;
 
     public int getX() {
         return x;
@@ -22,6 +24,12 @@ public class Alan_Object {
     }
     public int getDy() {
         return dy;
+    }
+    public int getWidth(){
+        return w;
+    }
+    public int getHeight(){
+        return h;
     }
     public Image getImage() {
         return image;
@@ -46,5 +54,14 @@ public class Alan_Object {
         }
     }
 
+    public void keyReleased(KeyEvent i){
+        int key = i.getKeyCode();
 
+        if (key == KeyEvent.VK_RIGHT){
+            dx = 0;
+        }
+        if (key == KeyEvent.VK_LEFT){
+            dx = 0;
+        }
+    }
 }
