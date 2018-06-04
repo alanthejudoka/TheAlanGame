@@ -21,7 +21,7 @@ public class Alan_Object {
         y += dy;
     }
     public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/100x 100.png");
+        ImageIcon x = new ImageIcon("Photos4Game/Marcus1.png");
         image = x.getImage();
     }
     public int getX() {
