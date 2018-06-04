@@ -5,25 +5,30 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Alan_Object {
-    private int x;
-    private int y;
+    private int x = 40;
+    private int y = 60;
     private int dx;
     private int dy;
     private Image image;
     private int w;
     private int h;
 
+    public Alan_Object(){
+        loadImage();
+    }
+    public void move(){
+        x += dx;
+        y += dy;
+    }
+    public void loadImage() {
+        ImageIcon x = new ImageIcon("Photos4Game/100x 100.png");
+        image = x.getImage();
+    }
     public int getX() {
         return x;
     }
     public int getY() {
         return y;
-    }
-    public int getDx() {
-        return dx;
-    }
-    public int getDy() {
-        return dy;
     }
     public int getWidth(){
         return w;
@@ -34,23 +39,21 @@ public class Alan_Object {
     public Image getImage() {
         return image;
     }
-    public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/RealAlan1.jpg");
-        image = x.getImage();
-    }
-    public void move(){
-        x += dx;
-        y += dy;
-    }
-
     public void keyPressed(KeyEvent i){
         int key = i.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT){
-            dx += 4;
+            dx += 2;
         }
         if (key == KeyEvent.VK_LEFT){
-            dx -= 4;
+            dx -= 2;
+        }
+        if (key == KeyEvent.VK_UP) {
+            dy = -2;
+        }
+
+        if (key == KeyEvent.VK_DOWN) {
+            dy = 2;
         }
     }
 
@@ -62,6 +65,13 @@ public class Alan_Object {
         }
         if (key == KeyEvent.VK_LEFT){
             dx = 0;
+        }
+        if (key == KeyEvent.VK_UP) {
+            dy = 0;
+        }
+
+        if (key == KeyEvent.VK_DOWN) {
+            dy = 0;
         }
     }
 }

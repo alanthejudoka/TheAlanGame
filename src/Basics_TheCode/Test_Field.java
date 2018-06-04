@@ -63,8 +63,7 @@ public class Test_Field extends JPanel implements ActionListener{
 
         spaceShip.move();
 
-        repaint(spaceShip.getX()-1, spaceShip.getY()-1,
-                spaceShip.getWidth()+2, spaceShip.getHeight()+2);
+        repaint();
     }
 
     private class TAdapter extends KeyAdapter {
