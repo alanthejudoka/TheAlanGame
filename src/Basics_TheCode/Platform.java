@@ -27,7 +27,6 @@ class Platforming extends Alan_Object  {
         setFocusTraversalKeysEnabled(false);
     }
 
-    @Override
     protected void paintComponent (Graphics g) {
         int w = getWidth();
         int h = getHeight();
