@@ -21,7 +21,7 @@ public class Alan_Object {
         y += dy;
     }
     public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/Marcus1.png");
+        ImageIcon x = new ImageIcon("Photos4Game/100x 100.png");
         image = x.getImage();
     }
     public int getX() {
@@ -43,17 +43,17 @@ public class Alan_Object {
         int key = i.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT){
-            dx += 2;
+            dx = 4;
         }
         if (key == KeyEvent.VK_LEFT){
-            dx -= 2;
+            dx = -4;
         }
         if (key == KeyEvent.VK_UP) {
-            dy = -2;
+            dy = -4;
         }
 
         if (key == KeyEvent.VK_DOWN) {
-            dy = 2;
+            dy = 4;
         }
     }
 
