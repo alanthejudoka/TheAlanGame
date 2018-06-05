@@ -1,10 +1,12 @@
 package Basics_TheCode;
 
+import com.sun.javaws.util.JfxHelper;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Alan_Object {
+public class Alan_Object extends JFrame{
     private int x = 40;
     private int y = 60;
     private int dx;
