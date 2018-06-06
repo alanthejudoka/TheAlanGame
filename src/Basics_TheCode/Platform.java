@@ -2,12 +2,13 @@ package Basics_TheCode;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class Platform extends JFrame{
-    private Platform() {
+    public Platform() {
         setTitle("The Alan Game");
         add(new Platforming());
+        //add(new Alan_Object());
+
     }
     public static void main(String[] args) {
         Platform frame = new Platform();
@@ -18,14 +19,8 @@ public class Platform extends JFrame{
     }
 
 }
-class Platforming extends Alan_Object  {
+class Platforming extends JPanel  {
     public static final Color Brown = new Color(139, 69, 19);
-    int x=0, y=0, velX=0, velY=0;
-
-    public Platforming(){
-        setFocusable(true);
-        setFocusTraversalKeysEnabled(false);
-    }
 
     protected void paintComponent (Graphics g) {
         int w = getWidth();
@@ -38,6 +33,8 @@ class Platforming extends Alan_Object  {
         //ground
         g.setColor(Brown);
         g.fillRect(0, 800, w, 600);
+
+
 
 
 
