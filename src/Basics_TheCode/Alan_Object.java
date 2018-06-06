@@ -23,7 +23,7 @@ public class Alan_Object extends JFrame{
         y += dy;
     }
     public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/TinyAlan.png");
+        ImageIcon x = new ImageIcon("Photos4Game/WeirdAl1.png");
         image = x.getImage();
     }
     public int getX() {
