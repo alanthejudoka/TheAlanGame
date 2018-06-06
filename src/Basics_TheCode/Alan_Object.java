@@ -21,6 +21,18 @@ public class Alan_Object extends JFrame{
     public void move(){
         x += dx;
         y += dy;
+        if (x < 0){
+            x = 0;
+        }
+        if (y < 0){
+            y = 0;
+        }
+        if (x > 1140){
+            x = 1140;
+        }
+        if (y > 450){
+            y = 450;
+        }
     }
     public void loadImage() {
         ImageIcon x = new ImageIcon("Photos4Game/WeirdAl1.png");
@@ -32,12 +44,14 @@ public class Alan_Object extends JFrame{
     public int getY() {
         return y;
     }
+    /*
     public int getWidth(){
         return w;
     }
     public int getHeight(){
         return h;
     }
+    */
     public Image getImage() {
         return image;
     }
