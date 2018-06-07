@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Platform extends JFrame{
+
     public Platform() {
         setTitle("The Alan Game");
         add(new Platforming());
-        //add(new Alan_Object());
 
     }
     public static void main(String[] args) {
@@ -16,10 +16,20 @@ public class Platform extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-    }
 
+
+    }
 }
 class Platforming extends JPanel  {
+    ImageIcon mainCharacter;
+    int x, y;
+
+    public Platforming() {
+        mainCharacter = new ImageIcon("RealAlan1");
+
+    }
+
+
     public static final Color Brown = new Color(139, 69, 19);
 
     protected void paintComponent (Graphics g) {
@@ -34,8 +44,7 @@ class Platforming extends JPanel  {
         g.setColor(Brown);
         g.fillRect(0, 800, w, 600);
 
-
-
+        //g.drawImage
 
 
     }
