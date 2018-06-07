@@ -14,7 +14,7 @@ import java.io.InputStream;
 public class Platform_MUSIC_TEST extends JFrame{
     public Platform_MUSIC_TEST() {
         setTitle("The Alan Game");
-        add(new MusicalGround());
+        add(new Platforming());
         //add(new Alan_Object());
 
     }
@@ -34,11 +34,11 @@ public class Platform_MUSIC_TEST extends JFrame{
         AudioPlayer.player.start(audioStream);
     }
 }
-class MusicalGround extends JPanel  {
+class Platforming extends JPanel  {
     public static final Color Brown = new Color(139, 69, 19);
     int x=0, y=0, velX=0, velY=0;
 
-    public MusicalGround(){
+    public Platforming(){
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
     }
