@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 
 public class Alan_Object extends JFrame{
     private int x = 40;
-    private int y = 60;
+    private int y = 1140;
     private int dx;
     private int dy;
     private Image image;
@@ -68,9 +68,7 @@ public class Alan_Object extends JFrame{
             dy = -4;
         }
 
-        if (key == KeyEvent.VK_DOWN) {
-            dy = 4;
-        }
+
     }
 
     public void keyReleased(KeyEvent i){
@@ -83,11 +81,8 @@ public class Alan_Object extends JFrame{
             dx = 0;
         }
         if (key == KeyEvent.VK_UP) {
-            dy = 0;
+            dy = 4;
         }
 
-        if (key == KeyEvent.VK_DOWN) {
-            dy = 0;
-        }
     }
 }
