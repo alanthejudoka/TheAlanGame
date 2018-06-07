@@ -47,6 +47,7 @@ class Platforming extends JPanel  {
         int w = getWidth();
         int h = getHeight();
 
+        //atmosphere
         g.setColor(Color.ORANGE);
         g.fillRect(0, 0, w, h);
 
