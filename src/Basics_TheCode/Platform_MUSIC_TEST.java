@@ -1,23 +1,21 @@
 package Basics_TheCode;
-
-
 import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 import sun.audio.ContinuousAudioDataStream;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileInputStream;
 import java.io.IOException;
+import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
 
 
 public class Platform_MUSIC_TEST extends JFrame{
     public Platform_MUSIC_TEST() {
         setTitle("The Alan Game");
-        add(new Platforming());
+        add(new MusicPanel());
         //add(new Alan_Object());
     }
     public static void main(String[] args) {
@@ -26,8 +24,9 @@ public class Platform_MUSIC_TEST extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        button.addActionListener(new AL());
+        addActionListener(new AL());
     }
+
     public static class AL implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -49,11 +48,11 @@ public class Platform_MUSIC_TEST extends JFrame{
         }
     }
  }
-class Platforming extends JPanel  {
+class MusicPanel extends JPanel  {
     public static final Color Brown = new Color(139, 69, 19);
     int x=0, y=0, velX=0, velY=0;
 
-    public Platforming(){
+    public MusicPanel(){
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
     }
