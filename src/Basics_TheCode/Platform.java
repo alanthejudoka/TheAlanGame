@@ -2,12 +2,14 @@ package Basics_TheCode;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.ImageObserver;
+import java.awt.image.ImageProducer;
 
 public class Platform extends JFrame{
-
     public Platform() {
         setTitle("The Alan Game");
         add(new Platforming());
+        //add(new Alan_Object());
 
     }
     public static void main(String[] args) {
@@ -16,21 +18,16 @@ public class Platform extends JFrame{
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-
-
     }
+
 }
 class Platforming extends JPanel  {
-    ImageIcon mainCharacter;
-    int x, y;
+    public static final Color Brown = new Color(139, 69, 19);
+
 
     public Platforming() {
-        mainCharacter = new ImageIcon("RealAlan1");
 
     }
-
-
-    public static final Color Brown = new Color(139, 69, 19);
 
     protected void paintComponent (Graphics g) {
         int w = getWidth();
@@ -42,9 +39,12 @@ class Platforming extends JPanel  {
 
         //ground
         g.setColor(Brown);
-        g.fillRect(0, 800, w, 600);
+        g.fillRect(0, 801, w, 600);
 
-        //g.drawImage
+        //g.drawImage(mainCharacter, 100, 800, );
+
+
+
 
 
     }
