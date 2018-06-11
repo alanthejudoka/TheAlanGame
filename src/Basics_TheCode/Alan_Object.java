@@ -32,10 +32,10 @@ public class Alan_Object extends JFrame{
         }
         if (y > 450){
             y = 450;
-        }
+       }
     }
     public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/WeirdAl1.png");
+        ImageIcon x = new ImageIcon("Photos4Game/100x 100.png");
         image = x.getImage();
     }
     public int getX() {
