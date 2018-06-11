@@ -32,10 +32,10 @@ public class Alan_Object extends JFrame{
         }
         if (y > 450){
             y = 450;
-        }
+       }
     }
     public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/WeirdAl1.png");
+        ImageIcon x = new ImageIcon("Photos4Game/100x 100.png");
         image = x.getImage();
     }
     public int getX() {
@@ -44,14 +44,6 @@ public class Alan_Object extends JFrame{
     public int getY() {
         return y;
     }
-    /*
-    public int getWidth(){
-        return w;
-    }
-    public int getHeight(){
-        return h;
-    }
-    */
     public Image getImage() {
         return image;
     }
@@ -67,8 +59,6 @@ public class Alan_Object extends JFrame{
         if (key == KeyEvent.VK_UP) {
             dy = -4;
         }
-
-
     }
 
     public void keyReleased(KeyEvent i){
@@ -83,6 +73,5 @@ public class Alan_Object extends JFrame{
         if (key == KeyEvent.VK_UP) {
             dy = 4;
         }
-
     }
 }

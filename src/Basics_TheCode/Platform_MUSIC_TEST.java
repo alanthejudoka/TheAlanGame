@@ -1,44 +1,58 @@
 package Basics_TheCode;
-
-
+import sun.audio.AudioData;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
-
+import sun.audio.ContinuousAudioDataStream;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
+import static com.sun.java.accessibility.util.AWTEventMonitor.addActionListener;
 
 
 public class Platform_MUSIC_TEST extends JFrame{
     public Platform_MUSIC_TEST() {
         setTitle("The Alan Game");
-        add(new Platforming());
+        add(new MusicPanel());
         //add(new Alan_Object());
-
     }
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Platform_MUSIC_TEST frame = new Platform_MUSIC_TEST();
         frame.setSize(1400, 1400);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        String song = "Victorious.mp3";
-        InputStream in = new FileInputStream(song);
-
-        // create an audiostream from the inputstream
-        AudioStream audioStream = new AudioStream(in);
-
-        // play the audio clip with the audioplayer class
-        AudioPlayer.player.start(audioStream);
+        addActionListener(new AL());
     }
-}
-class Platforming extends JPanel  {
+
+    public static class AL implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            music();
+        }
+    }
+    public static void music() {
+        AudioPlayer MGP = AudioPlayer.player;
+        AudioStream BGM;
+        AudioData MD;
+        ContinuousAudioDataStream loop = null;
+        try {
+            BGM = new AudioStream(new FileInputStream("Victorious.mp3"));
+            MD = BGM.getData();
+            loop = new ContinuousAudioDataStream(MD);
+        }
+        catch (IOException error){
+            MGP.start(loop);
+        }
+    }
+ }
+class MusicPanel extends JPanel  {
     public static final Color Brown = new Color(139, 69, 19);
     int x=0, y=0, velX=0, velY=0;
 
-    public Platforming(){
+    public MusicPanel(){
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
     }
