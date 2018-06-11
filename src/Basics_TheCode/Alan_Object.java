@@ -59,8 +59,6 @@ public class Alan_Object extends JFrame{
         if (key == KeyEvent.VK_UP) {
             dy = -4;
         }
-
-
     }
 
     public void keyReleased(KeyEvent i){
@@ -75,6 +73,5 @@ public class Alan_Object extends JFrame{
         if (key == KeyEvent.VK_UP) {
             dy = 4;
         }
-
     }
 }

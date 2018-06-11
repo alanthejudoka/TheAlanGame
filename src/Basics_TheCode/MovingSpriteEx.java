@@ -21,13 +21,12 @@ public class MovingSpriteEx extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
     public static void main(String[] args) {
-
         EventQueue.invokeLater(() -> {
             MovingSpriteEx ex = new MovingSpriteEx();
             ex.setVisible(true);
         });
     }
+
 }
 
