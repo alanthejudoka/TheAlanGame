@@ -44,14 +44,6 @@ public class Alan_Object extends JFrame{
     public int getY() {
         return y;
     }
-    /*
-    public int getWidth(){
-        return w;
-    }
-    public int getHeight(){
-        return h;
-    }
-    */
     public Image getImage() {
         return image;
     }

@@ -19,12 +19,10 @@ public class Test_Field extends JPanel implements ActionListener{
     private final int DELAY = 10;
 
     public Test_Field() {
-
         initBoard();
     }
 
     private void initBoard() {
-
         addKeyListener(new TAdapter());
         setFocusable(true);
         setBackground(Color.black);
