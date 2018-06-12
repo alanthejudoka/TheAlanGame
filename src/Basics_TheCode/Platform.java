@@ -1,9 +1,11 @@
 package Basics_TheCode;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
+import java.awt.event.*;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+import javax.swing.*;
 
 public class Platform extends JFrame{
     public Platform() {
@@ -42,9 +44,6 @@ class Platforming extends JPanel  {
         g.fillRect(0, 801, w, 600);
 
         //g.drawImage(mainCharacter, 100, 800, );
-
-
-
 
 
     }

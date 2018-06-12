@@ -1,4 +1,4 @@
-
+package Basics_TheCode;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,12 +18,12 @@ public class ColeWantsToLearn extends JFrame{
     }
 
 }
-class Platforming extends JPanel implements ActionListener, KeyListener {
+class Platforminge extends JPanel implements ActionListener, KeyListener {
     Timer tm = new Timer(5, this);
     public static final Color Brown = new Color(139, 69, 19);
     int x=0, y=0, velX=0, velY=0;
 
-    public Platforming(){
+    public Platforminge(){
         tm.start();
         addKeyListener(this);
         setFocusable(true);

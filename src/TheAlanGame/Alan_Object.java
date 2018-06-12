@@ -1,6 +1,4 @@
-package Basics_TheCode;
-
-import com.sun.javaws.util.JfxHelper;
+package TheAlanGame;
 
 import javax.swing.*;
 import java.awt.*;

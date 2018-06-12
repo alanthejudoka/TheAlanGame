@@ -1,6 +1,5 @@
-package Basics_TheCode;
+package TheAlanGame;
 
-import javafx.scene.layout.Background;
 
 import java.awt.*;
 import javax.swing.*;

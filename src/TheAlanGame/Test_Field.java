@@ -1,6 +1,4 @@
-package Basics_TheCode;
-
-import org.omg.PortableInterceptor.ACTIVE;
+package TheAlanGame;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -15,7 +13,8 @@ import javax.swing.Timer;
 
 public class Test_Field extends JPanel implements ActionListener{
     private Timer timer;
-    private Alan_Object spaceShip;
+    private Alan_Object alan;
+    private Enemy_Object cole;
     private final int DELAY = 10;
 
     public Test_Field() {
@@ -27,7 +26,9 @@ public class Test_Field extends JPanel implements ActionListener{
         setFocusable(true);
         setBackground(Color.black);
         setDoubleBuffered(true);
-        spaceShip = new Alan_Object();
+        alan = new Alan_Object();
+        cole = new Enemy_Object();
+
         timer = new Timer(DELAY, this);
         timer.start();
     }
@@ -46,8 +47,8 @@ public class Test_Field extends JPanel implements ActionListener{
         g.fillRect(0,0, getWidth(), 730);
         g.setColor(Color.GRAY);
         g.fillRect(0, 7 * getWidth() / 8, getWidth(), getHeight() / 8);
-        g2d.drawImage(spaceShip.getImage(), spaceShip.getX(),
-                spaceShip.getY(), this);
+        g2d.drawImage(alan.getImage(), alan.getX(),
+                alan.getY(), this);
     }
 
     @Override
@@ -56,18 +57,16 @@ public class Test_Field extends JPanel implements ActionListener{
     }
 
     private void step() {
-        spaceShip.move();
+        alan.move();
         repaint();
     }
 
     private class TAdapter extends KeyAdapter {
         @Override
-        public void keyReleased(KeyEvent e) {
-            spaceShip.keyReleased(e);
+        public void keyReleased(KeyEvent e) {alan.keyReleased(e);
         }
         @Override
-        public void keyPressed(KeyEvent e) {
-            spaceShip.keyPressed(e);
+        public void keyPressed(KeyEvent e) {alan.keyPressed(e);
         }
     }
 }
