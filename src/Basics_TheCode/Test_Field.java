@@ -34,6 +34,7 @@ public class Test_Field extends JPanel implements ActionListener{
 
     @Override
     public void paintComponent(Graphics g) {
+
         super.paintComponent(g);
         doDrawing(g);
         Toolkit.getDefaultToolkit().sync();
@@ -41,6 +42,10 @@ public class Test_Field extends JPanel implements ActionListener{
 
     private void doDrawing(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
+        g.setColor(Color.ORANGE);
+        g.fillRect(0,0, getWidth(), 730);
+        g.setColor(Color.GRAY);
+        g.fillRect(0, 7 * getWidth() / 8, getWidth(), getHeight() / 8);
         g2d.drawImage(spaceShip.getImage(), spaceShip.getX(),
                 spaceShip.getY(), this);
     }

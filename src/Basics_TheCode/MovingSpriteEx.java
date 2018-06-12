@@ -1,7 +1,9 @@
 package Basics_TheCode;
 
-import java.awt.EventQueue;
-import javax.swing.JFrame;
+import javafx.scene.layout.Background;
+
+import java.awt.*;
+import javax.swing.*;
 
 public class MovingSpriteEx extends JFrame {
 
@@ -11,7 +13,6 @@ public class MovingSpriteEx extends JFrame {
     }
 
     private void initUI() {
-
         add(new Test_Field());
 
         setTitle("Moving sprite");

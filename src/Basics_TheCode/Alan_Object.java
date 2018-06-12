@@ -27,15 +27,15 @@ public class Alan_Object extends JFrame{
         if (y < 0){
             y = 0;
         }
-        if (x > 1140){
-            x = 1140;
+        if (x > 1369){
+            x = 1369;
         }
         if (y > 450){
             y = 450;
        }
     }
     public void loadImage() {
-        ImageIcon x = new ImageIcon("Photos4Game/100x 100.png");
+        ImageIcon x = new ImageIcon("Photos4Game/WeirdAl1.png");
         image = x.getImage();
     }
     public int getX() {
@@ -51,13 +51,13 @@ public class Alan_Object extends JFrame{
         int key = i.getKeyCode();
 
         if (key == KeyEvent.VK_RIGHT){
-            dx = 4;
+            dx = 6;
         }
         if (key == KeyEvent.VK_LEFT){
-            dx = -4;
+            dx = -6;
         }
         if (key == KeyEvent.VK_UP) {
-            dy = -4;
+            dy = -2;
         }
     }
 
