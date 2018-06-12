@@ -8,7 +8,7 @@ import java.awt.event.KeyEvent;
 
 public class Alan_Object extends JFrame{
     private int x = 40;
-    private int y = 325;
+    private int y = 500;
     private int dx;
     private int dy;
     private Image image;
@@ -27,11 +27,11 @@ public class Alan_Object extends JFrame{
         if (y < 0){
             y = 0;
         }
-        if (x > 1050){
-            x = 1050;
+        if (x > 1125){
+            x = 1125;
         }
-        if (y > 325){
-            y = 325;
+        if (y > 410){
+            y = 410;
        }
     }
     public void loadImage() {
