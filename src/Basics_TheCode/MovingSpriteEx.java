@@ -16,7 +16,7 @@ public class MovingSpriteEx extends JFrame {
         add(new Test_Field());
 
         setTitle("Moving sprite");
-        setSize(1600, 900);
+        setSize(1280, 720);
 
         setLocationRelativeTo(null);
         setResizable(false);

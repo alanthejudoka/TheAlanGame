@@ -43,9 +43,9 @@ public class Test_Field extends JPanel implements ActionListener{
     private void doDrawing(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g.setColor(Color.ORANGE);
-        g.fillRect(0,0, getWidth(), 730);
+        g.fillRect(0,0, getWidth(), getHeight() - 75);
         g.setColor(Color.GRAY);
-        g.fillRect(0, 730, getWidth(), getHeight() - 730);
+        g.fillRect(0, 600, getWidth(), 130);
         g2d.drawImage(spaceShip.getImage(), spaceShip.getX(),
                 spaceShip.getY(), this);
     }
