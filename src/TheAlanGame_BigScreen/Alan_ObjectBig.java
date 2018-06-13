@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 
 public class Alan_ObjectBig extends JFrame{
     private int x = 40;
-    private int y = 1140;
+    private int y = 1600;
     private int dx;
     private int dy;
     private Image image;
@@ -25,11 +25,11 @@ public class Alan_ObjectBig extends JFrame{
         if (y < 0){
             y = 0;
         }
-        if (x > 1369){
-            x = 1369;
+        if (x > 1445){
+            x = 1445;
         }
-        if (y > 450){
-            y = 450;
+        if (y > 539){
+            y = 539;
         }
     }
     public void loadImage() {

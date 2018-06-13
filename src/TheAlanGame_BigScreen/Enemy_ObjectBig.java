@@ -2,7 +2,6 @@ package TheAlanGame_BigScreen;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class Enemy_ObjectBig extends JFrame{
     private int x = 600;
@@ -44,32 +43,5 @@ public class Enemy_ObjectBig extends JFrame{
     }
     public Image getImage() {
         return image;
-    }
-    public void keyPressed(KeyEvent i){
-        int key = i.getKeyCode();
-
-        if (key == KeyEvent.VK_RIGHT){
-            dx = 6;
-        }
-        if (key == KeyEvent.VK_LEFT){
-            dx = -6;
-        }
-        if (key == KeyEvent.VK_UP) {
-            dy = -2;
-        }
-    }
-
-    public void keyReleased(KeyEvent i){
-        int key = i.getKeyCode();
-
-        if (key == KeyEvent.VK_RIGHT){
-            dx = 0;
-        }
-        if (key == KeyEvent.VK_LEFT){
-            dx = 0;
-        }
-        if (key == KeyEvent.VK_UP) {
-            dy = 4;
-        }
     }
 }

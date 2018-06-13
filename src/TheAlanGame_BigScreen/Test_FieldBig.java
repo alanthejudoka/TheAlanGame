@@ -49,6 +49,7 @@ public class Test_FieldBig extends JPanel implements ActionListener{
         g.fillRect(0, 7 * getWidth() / 8, getWidth(), getHeight() / 8);
         g2d.drawImage(alan.getImage(), alan.getX(),
                 alan.getY(), this);
+        g2d.drawImage(cole.getImage(), cole.getX(), cole.getY(), this);
     }
 
     @Override
