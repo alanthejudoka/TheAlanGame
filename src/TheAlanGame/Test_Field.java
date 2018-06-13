@@ -58,6 +58,7 @@ public class Test_Field extends JPanel implements ActionListener{
 
     private void step() {
         alan.move();
+        cole.move();
         repaint();
     }
 

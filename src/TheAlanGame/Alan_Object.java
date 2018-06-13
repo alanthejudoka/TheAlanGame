@@ -24,6 +24,7 @@ public class Alan_Object extends JFrame{
         }
         if (y < 0){
             y = 0;
+
         }
         if (x > 1125){
             x = 1125;
