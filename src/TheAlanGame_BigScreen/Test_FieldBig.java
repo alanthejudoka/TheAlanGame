@@ -59,6 +59,7 @@ public class Test_FieldBig extends JPanel implements ActionListener{
 
     private void step() {
         alan.move();
+        cole.move();
         repaint();
     }
 
