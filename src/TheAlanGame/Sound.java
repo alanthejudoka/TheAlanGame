@@ -1,4 +1,4 @@
-package Basics_TheCode;
+package TheAlanGame;
 
 import javax.sound.sampled.*;
 import java.io.File;
