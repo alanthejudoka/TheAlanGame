@@ -3,11 +3,11 @@ package TheAlanGame;
 import javax.sound.sampled.*;
 import java.io.File;
 
-class Sounds {
+class Sound {
     private String[] files = {"src\\Victorious.mp3"};
     private Clip[] clips = new Clip[files.length];
 
-    public Sounds() {
+    public Sound() {
         try {
             for (int i=0; i<files.length; i++) {
                 File file = new File(files[i]);
