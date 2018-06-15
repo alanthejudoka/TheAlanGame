@@ -10,8 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import javax.swing.*;
 
 public class Test_FieldBig extends JPanel implements ActionListener{
     private Timer timer;
@@ -90,15 +89,13 @@ public class Test_FieldBig extends JPanel implements ActionListener{
                 cole.dx -= 6;
             }
             cole.keyReleased(e);
+
+            //TODO: Make it so that if we collide, Cole flies off the screen
         }
         @Override
         public void keyPressed(KeyEvent e) {
             alan.keyPressed(e);
             cole.keyPressed(e);
         }
-
-
-
     }
-
 }
