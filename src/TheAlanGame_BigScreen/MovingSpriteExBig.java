@@ -1,5 +1,5 @@
 package TheAlanGame_BigScreen;
-
+import TheAlanGame.Test_Field;
 
 import java.awt.*;
 import javax.swing.*;
@@ -13,6 +13,9 @@ public class MovingSpriteExBig extends JFrame {
 
     private void initUI() {
         add(new Test_FieldBig());
+        add(new Test_Field());
+        Sound s = new Sound();
+        s.playSong();
 
         setTitle("Moving sprite");
         setSize(1600, 900);
