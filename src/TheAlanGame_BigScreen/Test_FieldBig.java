@@ -1,5 +1,7 @@
 package TheAlanGame_BigScreen;
 
+import TheAlanGame.Alan_Object;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -65,10 +67,38 @@ public class Test_FieldBig extends JPanel implements ActionListener{
 
     private class TAdapter extends KeyAdapter {
         @Override
-        public void keyReleased(KeyEvent e) {alan.keyReleased(e);
+        public void keyReleased(KeyEvent e) {
+
+            if (e.getKeyCode() == 'w'){
+                alan.dy -= 2;
+            }
+            if (e.getKeyCode() == 'd'){
+                alan.dx += 6;
+            }
+            if (e.getKeyCode() == 'a') {
+                alan.dx -= 6;
+            }
+            alan.keyReleased(e);
+
+            if (e.getKeyCode() == 'i'){
+                cole.dy -= 2;
+            }
+            if (e.getKeyCode() == 'l'){
+                cole.dx += 6;
+            }
+            if (e.getKeyCode() == 'j') {
+                cole.dx -= 6;
+            }
+            cole.keyReleased(e);
+
         }
         @Override
         public void keyPressed(KeyEvent e) {alan.keyPressed(e);
         }
+
+
+
+
     }
+
 }
