@@ -12,6 +12,7 @@ public class Alan_ObjectBig extends JFrame{
     private Image image;
     private int w;
     private int h;
+    protected JPanel panel;
 
     public Alan_ObjectBig(){
         loadImage();
