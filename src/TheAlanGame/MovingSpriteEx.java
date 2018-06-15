@@ -1,6 +1,4 @@
 package TheAlanGame;
-
-
 import java.awt.*;
 import javax.swing.*;
 
@@ -13,7 +11,8 @@ public class MovingSpriteEx extends JFrame {
 
     private void initUI() {
         add(new Test_Field());
-
+        Sound s = new Sound();
+        s.playSong();
         setTitle("Moving sprite");
         setSize(1280, 720);
 

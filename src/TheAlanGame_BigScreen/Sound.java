@@ -1,4 +1,4 @@
-package TheAlanGame;
+package TheAlanGame_BigScreen;
 
 import javax.sound.sampled.*;
 import java.io.File;

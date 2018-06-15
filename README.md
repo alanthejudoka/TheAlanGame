@@ -1,3 +1,2 @@
 # TheAlanGame
-Welcome to the Alan game! This game will be similiar to Mario, except for we have other people as the characters.
-We will add the song SAD! into the game.
+The Alan Game is a game where Alan is the main player. Cole is the enemy and they fight where the player does things to Cole.
