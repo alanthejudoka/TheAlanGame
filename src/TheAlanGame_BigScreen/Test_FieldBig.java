@@ -90,12 +90,12 @@ public class Test_FieldBig extends JPanel implements ActionListener{
                 cole.dx -= 6;
             }
             cole.keyReleased(e);
-
         }
         @Override
-        public void keyPressed(KeyEvent e) {alan.keyPressed(e);
+        public void keyPressed(KeyEvent e) {
+            alan.keyPressed(e);
+            cole.keyPressed(e);
         }
-
 
 
 

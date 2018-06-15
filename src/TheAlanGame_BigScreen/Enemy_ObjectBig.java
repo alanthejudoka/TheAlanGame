@@ -49,13 +49,13 @@ public class Enemy_ObjectBig extends JFrame{
     public void keyPressed(KeyEvent i){
         int key = i.getKeyCode();
 
-        if (key == KeyEvent.VK_RIGHT){
+        if (key == KeyEvent.VK_L){
             dx = 6;
         }
-        if (key == KeyEvent.VK_LEFT){
+        if (key == KeyEvent.VK_J){
             dx = -6;
         }
-        if (key == KeyEvent.VK_UP) {
+        if (key == KeyEvent.VK_I) {
             dy = -2;
         }
     }
@@ -63,13 +63,13 @@ public class Enemy_ObjectBig extends JFrame{
     public void keyReleased(KeyEvent i){
         int key = i.getKeyCode();
 
-        if (key == KeyEvent.VK_RIGHT){
+        if (key == KeyEvent.VK_L){
             dx = 0;
         }
-        if (key == KeyEvent.VK_LEFT){
+        if (key == KeyEvent.VK_J){
             dx = 0;
         }
-        if (key == KeyEvent.VK_UP) {
+        if (key == KeyEvent.VK_I) {
             dy = 4;
         }
     }
