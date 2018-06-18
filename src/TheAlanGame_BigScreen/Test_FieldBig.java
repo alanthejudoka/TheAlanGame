@@ -12,7 +12,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
 
-public class Test_FieldBig extends JPanel implements ActionListener{
+public class Test_FieldBig extends JPanel implements ActionListener {
     private Timer timer;
     private Alan_ObjectBig alan;
     private Enemy_ObjectBig cole;
@@ -45,7 +45,7 @@ public class Test_FieldBig extends JPanel implements ActionListener{
     private void doDrawing(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g.setColor(Color.ORANGE);
-        g.fillRect(0,0, getWidth(), 730);
+        g.fillRect(0, 0, getWidth(), 730);
         g.setColor(Color.GRAY);
         g.fillRect(0, 7 * getWidth() / 8, getWidth(), getHeight() / 8);
         g2d.drawImage(alan.getImage(), alan.getX(),
@@ -61,6 +61,11 @@ public class Test_FieldBig extends JPanel implements ActionListener{
     private void step() {
         alan.move();
         cole.move();
+
+        if (alan.rectangle.intersects(cole.rectangle)) {
+            System.exit(0);
+            System.out.println("Collision Detected");
+        }
         repaint();
     }
 
@@ -68,10 +73,10 @@ public class Test_FieldBig extends JPanel implements ActionListener{
         @Override
         public void keyReleased(KeyEvent e) {
 
-            if (e.getKeyCode() == 'w'){
+            if (e.getKeyCode() == 'w') {
                 alan.dy -= 2;
             }
-            if (e.getKeyCode() == 'd'){
+            if (e.getKeyCode() == 'd') {
                 alan.dx += 6;
             }
             if (e.getKeyCode() == 'a') {
@@ -79,10 +84,10 @@ public class Test_FieldBig extends JPanel implements ActionListener{
             }
             alan.keyReleased(e);
 
-            if (e.getKeyCode() == 'i'){
+            if (e.getKeyCode() == 'i') {
                 cole.dy -= 2;
             }
-            if (e.getKeyCode() == 'l'){
+            if (e.getKeyCode() == 'l') {
                 cole.dx += 6;
             }
             if (e.getKeyCode() == 'j') {
@@ -90,8 +95,9 @@ public class Test_FieldBig extends JPanel implements ActionListener{
             }
             cole.keyReleased(e);
 
-            //TODO: Make it so that if we collide, Cole flies off the screen
+
         }
+
         @Override
         public void keyPressed(KeyEvent e) {
             alan.keyPressed(e);

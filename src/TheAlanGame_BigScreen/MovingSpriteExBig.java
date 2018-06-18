@@ -1,4 +1,5 @@
 package TheAlanGame_BigScreen;
+
 import TheAlanGame.Test_Field;
 
 import java.awt.*;
@@ -21,6 +22,7 @@ public class MovingSpriteExBig extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
+
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             MovingSpriteExBig ex = new MovingSpriteExBig();
