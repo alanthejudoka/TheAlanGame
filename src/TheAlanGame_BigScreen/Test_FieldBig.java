@@ -64,7 +64,9 @@ public class Test_FieldBig extends JPanel implements ActionListener {
 
         if (alan.rectangle.intersects(cole.rectangle)) {
             System.exit(0);
-            System.out.println("Collision Detected");
+        }
+        if (cole.rectangle.intersects(alan.rectangle)) {
+            System.exit(0);
         }
         repaint();
     }
@@ -85,13 +87,13 @@ public class Test_FieldBig extends JPanel implements ActionListener {
             alan.keyReleased(e);
 
             if (e.getKeyCode() == 'i') {
-                cole.dy -= 2;
+                cole.dy -= 4;
             }
             if (e.getKeyCode() == 'l') {
-                cole.dx += 6;
+                cole.dx += 8;
             }
             if (e.getKeyCode() == 'j') {
-                cole.dx -= 6;
+                cole.dx -= 8;
             }
             cole.keyReleased(e);
 

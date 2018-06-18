@@ -64,13 +64,13 @@ public class Enemy_ObjectBig extends JFrame {
         int key = i.getKeyCode();
 
         if (key == KeyEvent.VK_L) {
-            dx = 6;
+            dx = 8;
         }
         if (key == KeyEvent.VK_J) {
-            dx = -6;
+            dx = -8;
         }
         if (key == KeyEvent.VK_I) {
-            dy = -2;
+            dy = -4;
         }
     }
 
